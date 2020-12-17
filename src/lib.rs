@@ -93,6 +93,7 @@ pub mod crc32;
     feature = "device-selected",
     not(any(feature = "stm32f411", feature = "stm32f412", feature = "stm32f401",))
 ))]
+pub mod can;
 pub mod dac;
 #[cfg(feature = "device-selected")]
 pub mod delay;
@@ -166,6 +167,8 @@ pub mod pwm;
 pub mod qei;
 #[cfg(feature = "device-selected")]
 pub mod rcc;
+#[cfg(feature = "device-selected")]
+pub mod rtc;
 #[cfg(all(
     feature = "sdio",
     not(any(feature = "stm32f410", feature = "stm32f446",))
